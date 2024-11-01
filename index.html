@@ -1,0 +1,43 @@
+// Fichier : index.js
+
+// Afficher un message de bienvenue dans la console
+console.log("Bienvenue sur le site, Yumi ! J'espère que ce cadeau te plaira ❤️");
+
+// Fonction pour ajouter un effet au survol des liens de navigation
+function setupNavHover() {
+    const navLinks = document.querySelectorAll("nav a");
+    navLinks.forEach(link => {
+        link.addEventListener("mouseover", () => {
+            link.style.color = "#9811ea"; // Changer la couleur au survol
+        });
+        link.addEventListener("mouseout", () => {
+            link.style.color = "white"; // Réinitialiser la couleur
+        });
+    });
+}
+
+// Fonction pour gérer l'affichage du pied de page au défilement
+function setupFooterScrollEffect() {
+    let lastScrollTop = 0;
+    const footer = document.getElementById("footer");
+
+    window.addEventListener("scroll", () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // Défilement vers le bas : masquer le pied de page
+            footer.classList.add("footer-hidden");
+        } else {
+            // Défilement vers le haut : afficher le pied de page
+            footer.classList.remove("footer-hidden");
+        }
+        lastScrollTop = scrollTop;
+    });
+}
+
+// Afficher une alerte d'accueil lors du chargement initial de la page
+window.addEventListener("load", () => {
+    alert("Bienvenue, Yumi ! 🎉 J'espère que ce site te surprendra et te touchera.");
+    setupNavHover();           // Initialiser les effets au survol
+    setupFooterScrollEffect();  // Initialiser l'effet de défilement pour le pied de page
+});
