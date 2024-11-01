@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pour Yumi 💞</title>
+    <style>
+        /* Styles de base */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* En-tête */
+        header {
+            background-color: #ff55ce;
+            color: white;
+            padding: 1.5rem 1rem;
+            text-align: center;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            background-color: #4CAF50;
+        }
+
+        /* Contenu principal */
+        .main-content {
+            padding: 2rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        /* Pied de page */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9rem;
+            transition: transform 0.3s ease;
+        }
+
+        /* Classe pour masquer le pied de page */
+        .footer-hidden {
+            transform: translateY(100%);
+        }
+
+        /* Styles responsive */
+        @media (min-width: 768px) {
+            nav a {
+                font-size: 1.1rem;
+            }
+
+            .main-content {
+                padding: 3rem;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 1rem;
+                font-size: 1.2rem;
+            }
+
+            nav a {
+                padding: 0.5rem;
+                font-size: 0.9rem;
+            }
+
+            footer {
+                font-size: 0.8rem;
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- En-tête -->
+    <header>
+        <h1>Bonne lecture Yumi ! 🌟</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="Accueil.html">Accueil</a>
+        <a href="#Déclaration.html">Déclaration</a>
+    </nav>
+
+    <!-- Contenu principal -->
+    <div class="main-content">
+            <h2>Bonjour Yumi, j'espère que tu vas bien moi je suis en galère pour héberger ce site mais j'espère que j'arriverai à te le donner.</h2>
+            <p>Si je t'ai fait ce site, c'est parce que je trouve plus impactant quelqu'un qui fait un site juste pour toi avec une déclaration à l'intérieur.
+            Je sais que tu vas m'embrouiller car pas obligé de faire aussi gros. Mais j'avais envie de te faire au moins cette surprise.</p>
+
+            <p>Avec ce site, je voulais simplement te remercier de l'amour que tu m'offres, tu es d'une sagesse incroyable, c'est limite admirable. Je t'aime de toute mon âme, mon cœur, t'imagine pas tout ce que je suis prêt à faire juste pour que tu sois heureuse et aimée.</p>
+
+            <p>Tu m'as ouvert une partie de moi inaccessible (bizarre dit comme ça) mais juste merci. Merci d'être ma copine. Merci de m'aimer. Merci d'être juste là à mes côtés, me permettant de découvrir une vie de couple simplement normale et saine dont j'ai toujours rêvé. J'ai envie de te dire "je t'aime" toute la journée car mon cœur est rempli d'amour pour toi. Personne ne prendra ta place, tu es tout pour moi.</p>
+
+            <p>Je tiens à nous deux, notre relation, et en toi j'aime m'endormir à tes côtés, discuter avec toi, t'aimer j'aime tout chez toi et je veux continuer à pouvoir aimer cette personne 💖</p>
+    </div>
+
+    <!-- Pied de page -->
+    <footer id="footer">
+        <p>&copy; Un site fait par Néméhotatsé Duval. 🎪</p>
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        const footer = document.getElementById('footer');
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Scroll vers le bas : masquer le pied de page
+                footer.classList.add('footer-hidden');
+            } else {
+                // Scroll vers le haut : afficher le pied de page
+                footer.classList.remove('footer-hidden');
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
+
+</body>
+</html>
